@@ -1,0 +1,98 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    text-align: center;
+    /* 新增的渐变背景效果 */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* 其余样式保持不变 */
+
+
+.scrolling-questions {
+    background-color: #FFFFFF;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    padding: 20px 0;
+}
+
+.scroll-text {
+    display: inline-block;
+    white-space: nowrap;
+    /* 通过调整动画时间来控制滚动速度 */
+    animation: scroll 60s linear infinite;
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+
+
+.chat-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    max-width: 600px; /* Adjusted chatbox width */
+}
+
+.input-text, .process-btn {
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 80%;
+    display: block;
+}
+
+.process-btn {
+    background-color: #FF85C0;
+    color: white;
+    cursor: pointer;
+}
+
+.process-btn:hover {
+    background-color: #F759AB;
+}
+
+.processed-text {
+    text-align: left;
+    background-color: #E7E6E6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FF85C0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    display: none;
+}

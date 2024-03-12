@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elio Demo</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="scrolling-questions">
+        <div class="scroll-text">
+            How does my child manage difficulties? • 
+            What are my child's happiest moments? • 
+            Where does my child concentrate most? • 
+            Have my child's set goals been achieved? • 
+            Are there any safety alerts for my child? • 
+            How is my child's food logging being handled? • 
+            What can I learn from my child's behavior pattern analysis? 
+            How does my child manage difficulties? • 
+            What are my child's happiest moments? • 
+            Where does my child concentrate most? • 
+            Have my child's set goals been achieved? • 
+            Are there any safety alerts for my child? • 
+            How is my child's food logging being handled? • 
+            What can I learn from my child's behavior pattern analysis?
+        </div>
+    </div>
+    
+
+    <div class="chat-container">
+        <h1>Ask Elio</h1>
+        <input type="text" id="textInput" placeholder="Enter text" class="input-text">
+        <button onclick="processText()" class="process-btn">Get Insights</button>
+        <div class="processed-text"><span id="processedText"></span></div>
+    </div>
+
+    <button class="to-top-btn" onclick="scrollToTop()">Return to Top</button>
+
+    <script src="/static/js/processText.js"></script>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        }
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.querySelector('.to-top-btn').style.display = "block";
+            } else {
+                document.querySelector('.to-top-btn').style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>
