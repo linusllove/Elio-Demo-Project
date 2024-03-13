@@ -53,4 +53,4 @@ def gpt_api_call(input_question):
     return is_success, response
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0')
